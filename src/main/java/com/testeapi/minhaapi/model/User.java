@@ -3,8 +3,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 
-@Document(collection = "usuarios")
-public class Usuario {
+@Document(collection = "users")
+public class User {
 
 	@Id
 	private String Id;
@@ -12,9 +12,9 @@ public class Usuario {
 	private String login;
 	private String senha;
 	
-	public Usuario() {}
+	public User() {}
 	
-	public Usuario(String nome, String login, String senha) {
+	public User(String nome, String login, String senha) {
 		this.nome = nome;
 		this.login = login;
 		this.senha = senha;
@@ -51,7 +51,5 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	
-	
 	
 }
